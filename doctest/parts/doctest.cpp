@@ -2296,7 +2296,6 @@ namespace {
                 const char* const fmt = "%Y-%m-%dT%H:%M:%SZ";
 
                 std::strftime(timeStamp, timeStampSize, fmt, timeInfo);
-
                 return std::string(timeStamp);
             }
 
@@ -2376,21 +2375,30 @@ namespace {
         void test_run_start() override {}
 
         void test_run_end(const TestRunStats& p) override {
+            // remove .exe extension - mainly to have the same output on UNIX and Windows
             std::string binary_name = skipPathFromFilename(opt.binary_name.c_str());
+#ifdef DOCTEST_PLATFORM_WINDOWS
+            if(binary_name.rfind(".exe") != std::string::npos)
+                binary_name = binary_name.substr(0, binary_name.length() - 4);
+#endif // DOCTEST_PLATFORM_WINDOWS
             xml.startElement("testsuites");
             xml.startElement("testsuite").writeAttribute("name", binary_name)
                     .writeAttribute("errors", testCaseData.totalErrors)
                     .writeAttribute("failures", testCaseData.totalFailures)
-                    .writeAttribute("tests", p.numAsserts)
-                    .writeAttribute("time", testCaseData.totalSeconds)
-                    .writeAttribute("doctest_version", DOCTEST_VERSION_STR)
-                    .writeAttribute("timestamp", JUnitTestCaseData::getCurrentTimestamp());
+                    .writeAttribute("tests", p.numAsserts);
+            if(opt.no_time_in_output == false) {
+                xml.writeAttribute("time", testCaseData.totalSeconds);
+                xml.writeAttribute("timestamp", JUnitTestCaseData::getCurrentTimestamp());
+            }
+            if(opt.no_version == false)
+                xml.writeAttribute("doctest_version", DOCTEST_VERSION_STR);
 
-            for (const auto& testCase : testCaseData.testcases) {
+            for(const auto& testCase : testCaseData.testcases) {
                 xml.startElement("testcase")
                     .writeAttribute("classname", testCase.classname)
-                    .writeAttribute("name", testCase.name)
-                    .writeAttribute("time", testCase.time);
+                    .writeAttribute("name", testCase.name);
+                if(opt.no_time_in_output == false)
+                    xml.writeAttribute("time", testCase.time);
 
                 for (const auto& failure : testCase.failures) {
                     xml.scopedElement("failure")
@@ -3200,6 +3208,7 @@ void Context::parseArgs(int argc, const char* const* argv, bool withDefaults) {
     DOCTEST_PARSE_AS_BOOL_OR_FLAG("no-path-filenames", "npf", no_path_in_filenames, false);
     DOCTEST_PARSE_AS_BOOL_OR_FLAG("no-line-numbers", "nln", no_line_numbers, false);
     DOCTEST_PARSE_AS_BOOL_OR_FLAG("no-skipped-summary", "nss", no_skipped_summary, false);
+    DOCTEST_PARSE_AS_BOOL_OR_FLAG("no-time-in-output", "ntio", no_time_in_output, false);
     // clang-format on
 
     if(withDefaults) {

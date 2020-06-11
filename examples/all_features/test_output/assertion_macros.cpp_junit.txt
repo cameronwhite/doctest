@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="all_features.exe" errors="0" failures="52" tests="74" time="0.00054" doctest_version="2.3.8" timestamp="2020-06-04T20:46:56Z">
-    <testcase classname="assertion_macros.cpp" name="normal macros" time="0.000106">
+  <testsuite name="all_features" errors="0" failures="52" tests="74">
+    <testcase classname="assertion_macros.cpp" name="normal macros">
       <failure type="CHECK">
         assertion_macros.cpp(13): Expression throw_if(true, std::runtime_error("whops!")) == 42 became 
       </failure>
@@ -9,8 +9,8 @@
         assertion_macros.cpp(22): Expression doctest::Approx(0.502) == 0.501 became Approx( 0.502 ) == 0.501
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="expressions should be evaluated only once" time="0"/>
-    <testcase classname="assertion_macros.cpp" name="exceptions-related macros" time="7.5e-05">
+    <testcase classname="assertion_macros.cpp" name="expressions should be evaluated only once"/>
+    <testcase classname="assertion_macros.cpp" name="exceptions-related macros">
       <failure type="CHECK_THROWS">
         assertion_macros.cpp(33): Expression throw_if(false, 0) became 
       </failure>
@@ -33,7 +33,7 @@
         assertion_macros.cpp(42): Expression throw_if(true, 0) became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="exceptions-related macros for std::exception" time="5.3e-05">
+    <testcase classname="assertion_macros.cpp" name="exceptions-related macros for std::exception">
       <failure type="CHECK_THROWS">
         assertion_macros.cpp(47): Expression throw_if(false, 0) became 
       </failure>
@@ -50,7 +50,7 @@
         assertion_macros.cpp(54): Expression throw_if(true, std::runtime_error("whops!")) became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="WARN level of asserts don't fail the test case" time="6e-05">
+    <testcase classname="assertion_macros.cpp" name="WARN level of asserts don't fail the test case">
       <failure message="0" type="WARN">
         assertion_macros.cpp(62): Expression 0 became 0
       </failure>
@@ -91,7 +91,7 @@
         assertion_macros.cpp(75): Expression 1 became 1
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="CHECK level of asserts fail the test case but don't abort it" time="6.4e-05">
+    <testcase classname="assertion_macros.cpp" name="CHECK level of asserts fail the test case but don't abort it">
       <failure message="0" type="CHECK">
         assertion_macros.cpp(79): Expression 0 became 0
       </failure>
@@ -126,73 +126,73 @@
         assertion_macros.cpp(90): Expression 1 became 1
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 1" time="1.1e-05">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 1">
       <failure message="0" type="REQUIRE">
         assertion_macros.cpp(96): Expression 0 became 0
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 2" time="9e-06">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 2">
       <failure message="1" type="REQUIRE_FALSE">
         assertion_macros.cpp(100): Expression 1 became 1
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 3" time="9e-06">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 3">
       <failure type="REQUIRE_THROWS">
         assertion_macros.cpp(104): Expression throw_if(false, 0) became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 4" time="8e-06">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 4">
       <failure type="REQUIRE_THROWS_AS">
         assertion_macros.cpp(108): Expression throw_if(false, 0) became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 5" time="1.4e-05">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 5">
       <failure type="REQUIRE_THROWS_AS">
         assertion_macros.cpp(112): Expression throw_if(true, 0) became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 6" time="1e-05">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 6">
       <failure type="REQUIRE_THROWS_WITH">
         assertion_macros.cpp(116): Expression throw_if(false, "") became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 7" time="1.7e-05">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 7">
       <failure type="REQUIRE_THROWS_WITH">
         assertion_macros.cpp(120): Expression throw_if(true, "") became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 8" time="9e-06">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 8">
       <failure type="REQUIRE_THROWS_WITH_AS">
         assertion_macros.cpp(124): Expression throw_if(false, "") became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 9" time="1.6e-05">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 9">
       <failure type="REQUIRE_THROWS_WITH_AS">
         assertion_macros.cpp(128): Expression throw_if(true, "") became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 10" time="1.3e-05">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 10">
       <failure type="REQUIRE_NOTHROW">
         assertion_macros.cpp(132): Expression throw_if(true, 0) became 
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 11" time="9e-06">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 11">
       <failure message="1, 0" type="REQUIRE_EQ">
         assertion_macros.cpp(136): Expression 1, 0 became 1, 0
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 12" time="9e-06">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 12">
       <failure message="0" type="REQUIRE_UNARY">
         assertion_macros.cpp(140): Expression 0 became 0
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 13" time="1.1e-05">
+    <testcase classname="assertion_macros.cpp" name="REQUIRE level of asserts fail and abort the test case - 13">
       <failure message="1" type="REQUIRE_UNARY_FALSE">
         assertion_macros.cpp(144): Expression 1 became 1
       </failure>
     </testcase>
-    <testcase classname="assertion_macros.cpp" name="all binary assertions" time="5e-06"/>
-    <testcase classname="assertion_macros.cpp" name="some asserts used in a function called by a test case" time="3.2e-05">
+    <testcase classname="assertion_macros.cpp" name="all binary assertions"/>
+    <testcase classname="assertion_macros.cpp" name="some asserts used in a function called by a test case">
       <failure type="CHECK_THROWS_WITH_AS">
         assertion_macros.cpp(183): Expression throw_if(true, false) became 
       </failure>

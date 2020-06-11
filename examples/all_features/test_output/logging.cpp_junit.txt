@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="all_features.exe" errors="2" failures="6" tests="11" time="0.000165" doctest_version="2.3.8" timestamp="2020-06-04T20:46:56Z">
-    <testcase classname="logging.cpp" name="logging the counter of a loop" time="5.1e-05">
+  <testsuite name="all_features" errors="2" failures="6" tests="11">
+    <testcase classname="logging.cpp" name="logging the counter of a loop">
       <failure message="1 != 1" type="CHECK">
         logging.cpp(20): Expression vec[i] != (1 &lt;&lt; i) became 1 != 1
       </failure>
@@ -18,7 +18,7 @@
         logging.cpp(20): Expression vec[i] != (1 &lt;&lt; i) became 16 != 16
       </failure>
     </testcase>
-    <testcase classname="logging.cpp" name="a test case that will end from an exception" time="7.5e-05">
+    <testcase classname="logging.cpp" name="a test case that will end from an exception">
       <failure message="42 == 666" type="CHECK">
         logging.cpp(42): Expression some_var == 666 became 42 == 666
       </failure>
@@ -26,14 +26,14 @@
         0
       </error>
     </testcase>
-    <testcase classname="logging.cpp" name="a test case that will end from an exception and should print the unprinted context" time="1.6e-05">
+    <testcase classname="logging.cpp" name="a test case that will end from an exception and should print the unprinted context">
       <error message="exception">
         0
       </error>
     </testcase>
-    <testcase classname="logging.cpp" name="third party asserts can report failures to doctest" time="1.4e-05"/>
-    <testcase classname="logging.cpp" name="explicit failures 1" time="2e-06"/>
-    <testcase classname="logging.cpp" name="explicit failures 2" time="7e-06"/>
+    <testcase classname="logging.cpp" name="third party asserts can report failures to doctest"/>
+    <testcase classname="logging.cpp" name="explicit failures 1"/>
+    <testcase classname="logging.cpp" name="explicit failures 2"/>
   </testsuite>
 </testsuites>
 Program code.

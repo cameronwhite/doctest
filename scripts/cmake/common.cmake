@@ -46,6 +46,8 @@ function(doctest_add_test_impl)
     set(the_command "${the_command} --dt-no-exitcode=1")
     # append the argument for using the same line format in the output - so gcc/non-gcc builds have the same output
     set(the_command "${the_command} --dt-gnu-file-line=0")
+    # append the argument for skipping any time-related output so that the reference output from reporters is stable on CI
+    set(the_command "${the_command} --dt-no-time-in-output=1")
 
     string(STRIP ${the_command} the_command)
 

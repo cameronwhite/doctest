@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="all_features.exe" errors="0" failures="24" tests="16" time="7.7e-05" doctest_version="2.3.8" timestamp="2020-06-04T20:46:57Z">
-    <testcase classname="assertion_macros.cpp" name="all binary assertions" time="7.7e-05">
+  <testsuite name="all_features" errors="0" failures="24" tests="16">
+    <testcase classname="assertion_macros.cpp" name="all binary assertions">
       <failure message="1, 1" type="WARN_EQ">
         assertion_macros.cpp(149): Expression 1, 1 became 1, 1
       </failure>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="all_features.exe" errors="2" failures="4" tests="4" time="0.000128" doctest_version="2.3.8" timestamp="2020-06-04T20:46:56Z">
-    <testcase classname="stringification.cpp" name="all asserts should fail and show how the objects get stringified" time="0.000118">
+  <testsuite name="all_features" errors="2" failures="4" tests="4">
+    <testcase classname="stringification.cpp" name="all asserts should fail and show how the objects get stringified">
       <failure message="Foo{} == Foo{}" type="CHECK">
         stringification.cpp(98): Expression f1 == f2 became Foo{} == Foo{}
       </failure>
@@ -18,7 +18,7 @@
         MyTypeInherited&lt;int>(5, 4)
       </error>
     </testcase>
-    <testcase classname="stringification.cpp" name="a test case that registers an exception translator for int and then throws one" time="1e-05">
+    <testcase classname="stringification.cpp" name="a test case that registers an exception translator for int and then throws one">
       <error message="exception">
         5
       </error>

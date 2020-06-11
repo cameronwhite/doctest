@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="all_features.exe" errors="3" failures="9" tests="31" time="0.000251" doctest_version="2.3.8" timestamp="2020-06-04T20:46:56Z">
-    <testcase classname="coverage_maxout.cpp" name="exercising tricky code paths of doctest" time="0.000156">
+  <testsuite name="all_features" errors="3" failures="9" tests="31">
+    <testcase classname="coverage_maxout.cpp" name="exercising tricky code paths of doctest">
       <failure message="0 != 0" type="CHECK">
         coverage_maxout.cpp(41): Expression str.compare(const_str, true) != 0 became 0 != 0
       </failure>
@@ -30,17 +30,17 @@
         coverage_maxout.cpp(125): Expression 6 &lt;= a became 6 &lt;= Approx( 5.0 )
       </failure>
     </testcase>
-    <testcase classname="coverage_maxout.cpp" name="will end from a std::string exception" time="6.1e-05">
+    <testcase classname="coverage_maxout.cpp" name="will end from a std::string exception">
       <error message="exception">
         std::string!
       </error>
     </testcase>
-    <testcase classname="coverage_maxout.cpp" name="will end from a const char* exception" time="1.5e-05">
+    <testcase classname="coverage_maxout.cpp" name="will end from a const char* exception">
       <error message="exception">
         const char*!
       </error>
     </testcase>
-    <testcase classname="coverage_maxout.cpp" name="will end from an unknown exception" time="1.9e-05">
+    <testcase classname="coverage_maxout.cpp" name="will end from an unknown exception">
       <error message="exception">
         unknown exception
       </error>

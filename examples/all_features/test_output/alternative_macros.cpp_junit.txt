@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="all_features.exe" errors="0" failures="0" tests="6" time="2e-05" doctest_version="2.3.8" timestamp="2020-06-04T20:46:56Z">
-    <testcase classname="alternative_macros.cpp" name="custom macros" time="0"/>
-    <testcase classname="alternative_macros.cpp" name="bar" time="0"/>
-    <testcase classname="alternative_macros.cpp" name="foo" time="0"/>
-    <testcase classname="alternative_macros.cpp" name="bar" time="0"/>
-    <testcase classname="alternative_macros.cpp" name="baz" time="2e-05"/>
+  <testsuite name="all_features" errors="0" failures="0" tests="6">
+    <testcase classname="alternative_macros.cpp" name="custom macros"/>
+    <testcase classname="alternative_macros.cpp" name="bar"/>
+    <testcase classname="alternative_macros.cpp" name="foo"/>
+    <testcase classname="alternative_macros.cpp" name="bar"/>
+    <testcase classname="alternative_macros.cpp" name="baz"/>
   </testsuite>
 </testsuites>
 Program code.
